@@ -11,6 +11,9 @@ This lists various services that provide free access or credits towards API-base
 > [!TIP]
 > Rate limits and free tiers change frequently. Always check the provider's official documentation for the most up-to-date information.
 
+> [!NOTE]
+> Personal fork for learning purposes. See the [upstream repo](https://github.com/cheahjs/free-llm-api-resources) for the original.
+
 {{TOC}}
 
 ## Free Providers
