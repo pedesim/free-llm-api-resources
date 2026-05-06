@@ -45,6 +45,9 @@ def build_provider_table(providers: list) -> str:
         "Notes",
     ]
 
+    # Sort providers alphabetically by name for easier scanning
+    providers = sorted(providers, key=lambda p: p.get("name", "").lower())
+
     rows = []
     for provider in providers:
         name = provider.get("name", "Unknown")
@@ -98,21 +101,4 @@ def generate_readme() -> str:
 
 def main():
     """Main entry point for README generation."""
-    print(f"Reading template from: {TEMPLATE_PATH}")
-    print(f"Loading {len(PROVIDERS)} providers from data.py")
-
-    try:
-        readme_content = generate_readme()
-    except FileNotFoundError as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
-    except Exception as e:
-        print(f"Unexpected error during generation: {e}", file=sys.stderr)
-        sys.exit(1)
-
-    OUTPUT_PATH.write_text(readme_content, encoding="utf-8")
-    print(f"README.md written to: {OUTPUT_PATH}")
-
-
-if __name__ == "__main__":
-    main()
+    print(f"Reading template from: {TEMPLATE_PATH}"
