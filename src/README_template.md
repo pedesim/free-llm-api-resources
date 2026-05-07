@@ -15,7 +15,7 @@ This lists various services that provide free access or credits towards API-base
 > Personal fork for learning purposes. See the [upstream repo](https://github.com/cheahjs/free-llm-api-resources) for the original.
 
 > [!TIP]
-> Looking for a quick recommendation? For general use I've had good results with Google AI Studio (Gemini) and Groq for low-latency inference.
+> Looking for a quick recommendation? For general use I've had good results with Google AI Studio (Gemini) and Groq for low-latency inference. For coding tasks, Cerebras has been surprisingly fast.
 
 > [!NOTE]
 > Last manually reviewed: 2025-01. Some entries may be outdated — PRs and issues welcome.
