@@ -17,6 +17,9 @@ This lists various services that provide free access or credits towards API-base
 > [!TIP]
 > Looking for a quick recommendation? For general use I've had good results with Google AI Studio (Gemini) and Groq for low-latency inference.
 
+> [!NOTE]
+> Last manually reviewed: 2025-01. Some entries may be outdated — PRs and issues welcome.
+
 {{TOC}}
 
 ## Free Providers
