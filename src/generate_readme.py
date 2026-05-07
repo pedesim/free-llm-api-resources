@@ -64,7 +64,8 @@ def build_provider_table(providers: list) -> str:
             name_cell = name
 
         if isinstance(models, list):
-            models_cell = ", ".join(models)
+            # Join with a line break tag so long model lists stay readable in the table
+            models_cell = "<br>".join(models)
         else:
             models_cell = str(models)
 
@@ -94,11 +95,4 @@ def generate_readme() -> str:
     # Replace placeholders in template
     content = template.replace("{{ PROVIDER_TABLE }}", provider_table)
     content = content.replace("{{ LAST_UPDATED }}", timestamp)
-    content = content.replace("{{ PROVIDER_COUNT }}", str(len(PROVIDERS)))
-
-    return content
-
-
-def main():
-    """Main entry point for README generation."""
-    print(f"Reading template from: {TEMPLATE_PATH}"
+    content = content.replace("{{ PROVIDER_COUNT }}", str(len(PROVID
