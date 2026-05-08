@@ -20,6 +20,9 @@ This lists various services that provide free access or credits towards API-base
 > [!NOTE]
 > Last manually reviewed: 2025-03. Some entries may be outdated — PRs and issues welcome.
 
+> [!TIP]
+> Models marked with ⭐ are ones I personally use and recommend. YMMV.
+
 {{TOC}}
 
 ## Free Providers
