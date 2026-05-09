@@ -90,9 +90,27 @@ def generate_readme() -> str:
     provider_table = build_provider_table(PROVIDERS)
 
     # Get current timestamp in UTC
-    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    # Using a more readable format that includes the day of the week
+    timestamp = datetime.now(timezone.utc).strftime("%A, %Y-%m-%d %H:%M:%S UTC")
 
     # Replace placeholders in template
     content = template.replace("{{ PROVIDER_TABLE }}", provider_table)
     content = content.replace("{{ LAST_UPDATED }}", timestamp)
-    content = content.replace("{{ PROVIDER_COUNT }}", str(len(PROVID
+
+    return content
+
+
+def main():
+    """Main entry point."""
+    print(f"Reading template from: {TEMPLATE_PATH}")
+    print(f"Writing output to: {OUTPUT_PATH}")
+
+    readme_content = generate_readme()
+
+    OUTPUT_PATH.write_text(readme_content, encoding="utf-8")
+    print(f"Successfully generated {OUTPUT_PATH}")
+    print(f"Total providers listed: {len(PROVIDERS)}")
+
+
+if __name__ == "__main__":
+    main()
